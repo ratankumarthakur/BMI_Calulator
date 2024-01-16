@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
                 controller: wtcontroller,
                 decoration: const InputDecoration(
                     label: Text("enter your weight in kg"),
+                    labelStyle: TextStyle(color: Colors.purple),
                     prefixIcon: FaIcon(FontAwesomeIcons.weightScale,size: 20,color: Colors.purple,)
                 ),keyboardType: TextInputType.number,
               ),
@@ -62,6 +63,7 @@ class _HomePageState extends State<HomePage> {
                 controller: ftcontroller,
                 decoration: const InputDecoration(
                     label: Text("enter your height in feet"),
+                    labelStyle: TextStyle(color: Colors.purple),
                     prefixIcon: FaIcon(FontAwesomeIcons.horseHead,size: 20,color: Colors.purple,)
                 ),keyboardType: TextInputType.number,
               ),
@@ -73,6 +75,7 @@ class _HomePageState extends State<HomePage> {
                 controller: incontroller,
                 decoration: const InputDecoration(
                     label: Text("enter your height in inches"),
+                    labelStyle: TextStyle(color: Colors.purple),
                     prefixIcon: FaIcon(FontAwesomeIcons.horseHead,size: 20,color: Colors.purple,)
                 ),keyboardType: TextInputType.number,
               ),
@@ -80,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                 height: 50,
               ),
               ElevatedButton(style: ElevatedButton. styleFrom(primary: Colors.purple),
-                child: const Text('Calculate'),
+                child: const Text('Calculate',style:Textstyle(color:Colors.purple),
                 onPressed:(){
                   var wt=wtcontroller.text.toString();
                   var ft=ftcontroller.text.toString();
@@ -126,8 +129,6 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               Text(result,style: const TextStyle(fontSize: 24,color: Colors.black),)
-
-
             ],
           ),
         ),
